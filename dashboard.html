@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fc00ff, #00dbde);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .tab-button:hover {
+      background-color: #45a049;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .active-tab {
+      display: block;
+    }
+
+    .task {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .task:hover {
+      transform: translateY(-5px);
+    }
+
+    .task-title {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .task-description {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager Dashboard</h1>
+    <div class="tabs">
+      <button class="tab-button" onclick="openTab('dueDates')">Due Dates</button>
+      <button class="tab-button" onclick="openTab('timing')">Timing</button>
+      <!-- Add more buttons for other features if needed -->
+    </div>
+    
+    <div id="dueDates" class="tab-content active-tab">
+      <div class="task">
+        <div class="task-title">Complete Project Proposal</div>
+        <div class="task-description">Write and finalize project proposal document.</div>
+      </div>
+      <div class="task">
+        <div class="task-title">Meeting with Client</div>
+        <div class="task-description">Discuss project requirements with the client.</div>
+      </div>
+    </div>
+    
+    <div id="timing" class="tab-content">
+      <div class="task">
+        <div class="task-title">Set Up Project Timeline</div>
+        <div class="task-description">Create a detailed timeline for project milestones.</div>
+      </div>
+      <div class="task">
+        <div class="task-title">Assign Tasks to Team Members</div>
+        <div class="task-description">Delegate tasks to team members and set deadlines.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      var i, tabContent, tabButtons;
+      tabContent = document.getElementsByClassName("tab-content");
+      tabButtons = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].classList.remove("active-tab");
+      }
+      for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active-tab");
+      }
+      document.getElementById(tabName).classList.add("active-tab");
+      event.currentTarget.classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
+

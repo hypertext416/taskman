@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #ff00ff, #ff0000, #00ffff, #ff00ff);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #ffcc00;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .feature {
+      flex-basis: 30%;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      background-color: #ffcc00;
+      text-align: center;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      background-color: #ff00ff;
+    }
+
+    .feature h2 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #fff;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #ff00ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button:hover {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Priority-Based Task Manager</h1>
+  </div>
+
+  <div class="container">
+    <h2>Welcome to Our Task Manager</h2>
+    <p>A priority-based task manager designed to help you efficiently organize and manage your tasks.</p>
+    
+    <div class="features">
+      <div class="feature">
+        <h2>Priority Levels</h2>
+        <p>Organize tasks based on their importance and urgency with customizable priority levels.</p>
+      </div>
+      <div class="feature">
+        <h2>Notifications</h2>
+        <p>Receive notifications via email and SMS for approaching deadlines and task updates.</p>
+      </div>
+      <div class="feature">
+        <h2>Task Organization</h2>
+        <p>Organize tasks by due dates, categories, and labels for efficient task management.</p>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-button" onclick="window.location.href='login1.html'">Sign In</button>
+      <button class="tab-button" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+  </div>
+</body>
+</html>
